@@ -508,16 +508,23 @@ function calendar (calendarOptions) {
 
     function part (data) {
       var i, day, node;
+      var today = momentum.moment()
       for (i = 0; i < data.length; i++) {
+        var passedDay = '';
         if (tr.children.length === weekdayCount) {
           tr = dom({ type: 'tr', className: o.styles.dayRow, parent: month.body });
         }
         day = data.base.clone().add(i, 'days');
+        if (day.month() == today.month() &&
+            day.month() == ref.month() &&
+            day.date() < today.date()) {
+          passedDay = ' ' + o.styles.passedDay;
+        }
         node = dom({
           type: 'td',
           parent: tr,
           text: day.format(o.dayFormat),
-          className: validationTest(day, data.cell.join(' ').split(' ')).join(' ')
+          className: validationTest(day, data.cell.join(' ').split(' ')).join(' ') + passedDay
         });
         if (data.selectable && day.date() === current) {
           selectDayElement(node);

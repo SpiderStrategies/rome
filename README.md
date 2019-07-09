@@ -142,7 +142,8 @@ If you don't set an option, the default will be used. You can [look up the defau
     "selectedTime": "rd-time-selected",
     "time": "rd-time",
     "timeList": "rd-time-list",
-    "timeOption": "rd-time-option"
+    "timeOption": "rd-time-option",
+    "passedDay": "rd-day-passed"
   },
   "time": true,
   "timeFormat": "HH:mm",

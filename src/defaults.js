@@ -101,6 +101,7 @@ function defaults (options, cal) {
   if (styl.time === no) { styl.time = 'rd-time'; }
   if (styl.timeList === no) { styl.timeList = 'rd-time-list'; }
   if (styl.timeOption === no) { styl.timeOption = 'rd-time-option'; }
+  if (styl.passedDay === no) { styl.passedDay = 'rd-day-passed'; }
 
   return o;
 }
