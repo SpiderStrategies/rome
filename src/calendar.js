@@ -72,7 +72,7 @@ function calendar (calendarOptions) {
     api.getDate = getDate;
     api.getDateString = getDateString;
     api.getMoment = getMoment;
-	api.getRefCal = getRefCal
+    api.getRefCal = getRefCal
     api.hide = hide;
     api.next = addMonth;
     api.options = changeOptions;
