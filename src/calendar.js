@@ -447,7 +447,7 @@ function calendar (calendarOptions) {
       return;
     }
 
-    if (force || false) {
+    if (force) {
       ref = value
     } else {
       ref = inRange(date) || ref;
